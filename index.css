@@ -1,15 +1,40 @@
+
 body{
     background-image: url(/Pictures/fondo.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
+    margin: 420px 0 0 0;
     background-attachment: fixed;
+    background-repeat: round;
 }
-
+.logo{
+    display: flex;
+    justify-content: center;
+    width: 420px
+}
+.logo img{
+    width: 50%;
+}
 .seccion-principal{
-    margin: auto;
-    padding: 2%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+}
+.fila1,.fila2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.fotobaner{
+    border-radius:20px ;
+}
+.baner-ships{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width:200px;
+    margin: auto;
+    text-align: center;
+    border-radius: 20px;
+    margin: 20px;
+    transition-property:backdrop-filter, width, background-image;
+    transition-duration:.3s;
 }
