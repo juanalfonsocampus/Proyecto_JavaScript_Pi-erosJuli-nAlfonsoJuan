@@ -1,0 +1,71 @@
+@font-face {
+    font-family: LETRA1;
+    src: url(/Fuentes/Starjhol.ttf);
+}
+@font-face {
+    font-family: LETRA2;
+    src: url(/Fuentes//Starjedi.ttf);
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    overflow: hidden;
+}
+
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+}
+
+h2{
+    font-family: 'LETRA1';
+    color: #FFE81F;
+    letter-spacing: 5px;
+}
+strong{
+    font-family: 'LETRA2';
+    color: #0D8AA6;
+    letter-spacing: 1.5px;
+}
+#starship-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.card {
+    background: rgba(255, 255, 255, 0);
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px;
+    padding: 20px;
+    text-align: center;
+}
+.card h2 {
+    margin-top: 0;
+}

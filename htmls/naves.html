@@ -4,37 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starships</title>
-    <link rel="icon" href="/Pictures/naves.ico    ">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0f0f0;
-        }
-        #starship-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-        .card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-        }
-        .card h2 {
-            margin-top: 0;
-        }
-    </style>
+    <link rel="icon" href="/Pictures/naves.ico">
+    <link rel="stylesheet" href="/Css/naves.css">
 </head>
 <body>
+    <body>
+        <div class="video-background">
+            <video autoplay muted loop id="background-video">
+                <source src="/Pictures/fondonaves.mp4" type="video/mp4">
+            
+            </video>
+        </div>
+        
+        
+    </body>
+    
     <div id="starship-info"></div>
     <script src="/js/naves.js"></script>
 </body>
