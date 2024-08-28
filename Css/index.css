@@ -4,7 +4,7 @@
 }
 
 
-/* Estilos generales */
+
 body {
     background-image: url(/Pictures/fondo.png);
     background-attachment: fixed;
@@ -15,7 +15,7 @@ body {
 
 .seccion-principal {
     display: flex;
-    flex-direction: row; /* Cambiado a fila */
+    flex-direction: row; 
     align-items: center;
     justify-content: center;
     min-height: 100vh;
@@ -23,7 +23,7 @@ body {
     flex-wrap: wrap; /*Permite que los banners se ajusten en filas si la pantalla es pequeña */
 }
 
-/* Logo centrado y responsive */
+
 .logo {
     display: flex;
     justify-content: center;
@@ -34,7 +34,7 @@ body {
     width: 60%; /* Ajusta este tamaño según sea necesario */
 }
 
-/* Fila de banners */
+
 .fila {
     display: flex;
     justify-content: center;
@@ -42,11 +42,11 @@ body {
     width: 100%;
 }
 
-/* Contenedor del banner */
+
 .baner {
-    position: relative; /* Necesario para posicionar el título encima */
-    width: 300px; /* Asegura un tamaño uniforme para todos los banners */
-    height: 100px; /* Ajusta la altura de los banners */
+    position: relative; 
+    width: 300px; 
+    height: 100px; 
     margin: 10px;
     border-radius: 20px;
     overflow: hidden;
@@ -54,7 +54,7 @@ body {
     transition: all 0.01s ease;
 }
 
-/* Imágenes de los banners */
+
 .fotobaner {
     width: 100%;
     height: 100%;
@@ -63,7 +63,7 @@ body {
     transition: filter 0.5s ease; /* Transición suave para el filtro de desenfoque */
 }
 
-/* Contenedor del título que aparece al hacer hover */
+
 .baner-title {
     position: absolute;
     top: 0;
@@ -82,7 +82,7 @@ body {
     transition: opacity 0.5s ease; /* Transición suave de la opacidad */
 }
 
-/* Efecto hover: imagen borrosa y aparece el título */
+
 .baner:hover .fotobaner {
     filter: blur(5px); /* Aplica el desenfoque a la imagen */
 }
@@ -91,22 +91,22 @@ body {
     opacity: 1; /* Muestra el título al hacer hover */
 }
 
-/* Media query para pantallas más pequeñas */
+
 
 @media (max-width: 768px) {
     .seccion-principal {
-        flex-direction: column; /* En pantallas pequeñas, cambia a columna */
+        flex-direction: column; 
         flex-wrap: wrap;
         
     }
     
     .baner {
-        width: 90%; /* Ajusta el ancho de los banners para móviles */
+        width: 90%; 
         margin: 10px 0;
     }
 
     .logo img {
-        width: 100%; /* Logo más grande en móviles */
+        width: 100%; 
     }
     .logo{
         order: -1;
