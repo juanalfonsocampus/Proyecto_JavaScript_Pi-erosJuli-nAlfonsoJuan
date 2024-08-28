@@ -1,7 +1,10 @@
 @font-face {
-    font-family: Letra1;
-    src: url(/Fuentes/StarJedi-DGRW.ttf);
+    font-family: LETRA1;
+    src: url(/Fuentes/Starjhol.ttf);
 }
+
+
+/* Estilos generales */
 body {
     background-image: url(/Pictures/fondo.png);
     background-attachment: fixed;
@@ -12,13 +15,15 @@ body {
 
 .seccion-principal {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Cambiado a fila */
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     padding: 0 15px;
+    flex-wrap: wrap; /*Permite que los banners se ajusten en filas si la pantalla es pequeña */
 }
 
+/* Logo centrado y responsive */
 .logo {
     display: flex;
     justify-content: center;
@@ -29,6 +34,7 @@ body {
     width: 60%; /* Ajusta este tamaño según sea necesario */
 }
 
+/* Fila de banners */
 .fila {
     display: flex;
     justify-content: center;
@@ -36,37 +42,79 @@ body {
     width: 100%;
 }
 
+/* Contenedor del banner */
 .baner {
+    position: relative; /* Necesario para posicionar el título encima */
     width: 300px; /* Asegura un tamaño uniforme para todos los banners */
     height: 100px; /* Ajusta la altura de los banners */
     margin: 10px;
     border-radius: 20px;
     overflow: hidden;
     border: 2px solid #fff;
+    transition: all 0.01s ease;
 }
 
+/* Imágenes de los banners */
 .fotobaner {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Asegura que la imagen se recorte si es necesario */
     border-radius: 20px;
-    transition: transform 0.3s ease; /* Animación suave para hover */
+    transition: filter 0.5s ease; /* Transición suave para el filtro de desenfoque */
 }
 
-.fotobaner:hover {
-    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+/* Contenedor del título que aparece al hacer hover */
+.baner-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'LETRA1';
+    font-size: 1.5rem;
+    color:#fff;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente sobre la imagen */
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.5s ease; /* Transición suave de la opacidad */
+}
 
+/* Efecto hover: imagen borrosa y aparece el título */
+.baner:hover .fotobaner {
+    filter: blur(5px); /* Aplica el desenfoque a la imagen */
+}
+
+.baner:hover .baner-title {
+    opacity: 1; /* Muestra el título al hacer hover */
 }
 
 /* Media query para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .fila {
-        flex-direction: column; /* Para pantallas pequeñas, las filas se apilan verticalmente */
-        align-items: center;
-    }
 
+@media (max-width: 768px) {
+    .seccion-principal {
+        flex-direction: column; /* En pantallas pequeñas, cambia a columna */
+        flex-wrap: wrap;
+        
+    }
+    
     .baner {
         width: 90%; /* Ajusta el ancho de los banners para móviles */
         margin: 10px 0;
     }
+
+    .logo img {
+        width: 100%; /* Logo más grande en móviles */
+    }
+    .logo{
+        order: -1;
+    }
+}
+@media(min-width:1253px){
+    .seccion-principal{
+        flex-wrap: nowrap;
+    }
+
 }
