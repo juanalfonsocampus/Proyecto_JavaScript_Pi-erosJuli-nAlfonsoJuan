@@ -1,8 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const showAllInfoButton = document.getElementById('show-all-info-btn');
     const openingCrawlButton = document.getElementById('opening-crawl-btn');
     const directorButton = document.getElementById('director-btn');
     const producerButton = document.getElementById('producer-btn');
     const container = document.getElementById('films-container');
+
+    fetchAndDisplayFilms('all'); // Load all information by default
+
+    showAllInfoButton.addEventListener('click', async () => {
+        await fetchAndDisplayFilms('all');
+    });
 
     openingCrawlButton.addEventListener('click', async () => {
         await fetchAndDisplayFilms('opening_crawl');
@@ -33,7 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = document.createElement('div');
             card.className = 'info-card';
             let info;
-            if (type === 'opening_crawl') {
+            if (type === 'all') {
+                info = `
+                    <strong>Title:</strong> ${film.title}<br>
+                    <strong>Episode ID:</strong> ${film.episode_id}<br>
+                    <strong>Opening Crawl:</strong> <p>${film.opening_crawl}</p><br>
+                    <strong>Director:</strong> ${film.director}<br>
+                    <strong>Producer:</strong> ${film.producer}
+                `;
+            } else if (type === 'opening_crawl') {
                 info = `
                     <strong>Title:</strong> ${film.title}<br>
                     <strong>Episode ID:</strong> ${film.episode_id}<br>
