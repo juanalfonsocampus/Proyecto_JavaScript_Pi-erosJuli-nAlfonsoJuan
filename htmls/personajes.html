@@ -1,42 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Wars Character Info</title>
     <link rel="icon" href="/Pictures/personajes.ico">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-        }
-        #character-info {
-            margin-top: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .character {
-            border: 1px solid #ddd;
-            padding: 10px;
-            border-radius: 4px;
-            background-color: #fff;
-            width: 200px;
-        }
-        .character h2 {
-            font-size: 1.2em;
-            margin: 0 0 10px;
-        }
-        .character p {
-            margin: 5px 0;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/Proyecto_JavaScript_Pi-erosJuli-nAlfonsoJuan/Css/personajes.css" />  
+
+
 </head>
+
 <body>
     <h1>Personajes</h1>
+    <div class="button-container">
+        <button id="full-info">Show Full Info</button>
+        <button id="toggle-view">Show Hair Color</button>
+        <button id="yellow-eyes">Characters with Yellow Eyes</button>
+        <button id="female-characters">Female Characters</button>
+        <button id="light-skinned-characters">Light-Skinned Characters</button>
+        <button id="mass-over-60">Characters with Mass Over 60</button>
+        <button id="height-over-120">Characters with Height Over 120</button>
+
+
+    </div>
     <div id="character-info"></div>
 
-    <script src="/js/personajes.js"></script>
+    <script src="/Proyecto_JavaScript_Pi-erosJuli-nAlfonsoJuan/js/personajes.js"></script>
 </body>
+
 </html>
