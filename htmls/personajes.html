@@ -12,21 +12,37 @@
 </head>
 
 <body>
-    <h1>Personajes</h1>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="/Pictures//fondopersonajes.mp4" type="video/mp4">
+            
+        </video>
+    </div>
     <div class="button-container">
-        <button id="full-info">Show Full Info</button>
+        <button id="full-info">Show Full info</button>
         <button id="toggle-view">Show Hair Color</button>
         <button id="yellow-eyes">Characters with Yellow Eyes</button>
         <button id="female-characters">Female Characters</button>
         <button id="light-skinned-characters">Light-Skinned Characters</button>
-        <button id="mass-over-60">Characters with Mass Over 60</button>
-        <button id="height-over-120">Characters with Height Over 120</button>
+        <button id="mass-over-60">Characters with Mass over 60</button>
+        <button id="height-over-120">Characters with Height over 120</button>
 
 
     </div>
+
     <div id="character-info"></div>
 
-    <script src="/js/personajes.js"></script>
-</body>
+    <footer class="mainmenu">
+        <div class="containerbuttom">
+            <a href="/htmls/index.html">
+                <button>
+                    Main Menu
+                </button>
+            </a>
+        </div>
+    </footer>
 
+    
+</body>
+<script src="/js/personajes.js"></script>
 </html>

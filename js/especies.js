@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (type === 'average_lifespan') {
                 info = `
                     <strong>Name:</strong> ${speciesItem.name}<br>
-                    <strong>Average Lifespan:</strong> ${speciesItem.average_lifespan}
+                    <strong>Average Lifespan:</strong> ${speciesItem.average_lifespan} 
                 `;
             } else if (type === 'eye_colors') {
                 info = `

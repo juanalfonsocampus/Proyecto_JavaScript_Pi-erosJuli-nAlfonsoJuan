@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             viewMode = 'full';
             toggleButton.textContent = 'Show Hair Color';
-        }
+        }   
         fetchData();
     };
 

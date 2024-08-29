@@ -59,7 +59,14 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 50px;
     padding: 20px;
-    text-align: center;}
+    text-align: center;
+    font-size: 150%;
+}
+strong{
+    font-family:'LETRA2';
+    color: greenyellow;
+    letter-spacing: 4px;
+}
 
 .peticiones {
     display: flex;

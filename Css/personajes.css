@@ -1,12 +1,48 @@
+@font-face {
+    font-family: LETRA1;
+    src: url(/Fuentes/Starjhol.ttf);
+}
+@font-face {
+    font-family: LETRA2;
+    src: url(/Fuentes//Starjedi.ttf);
+}   
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 #character-info {
     margin-top: 20px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -27,22 +63,27 @@ body {
 .character p {
     margin: 5px 0;
 }
-
-.button-container {
-    margin-bottom: 20px;
+.button-container{
+    display: flex;
+    justify-content: space-evenly   ;
+    justify-content: row;
+    flex-wrap: wrap;
 }
-
-.button-container button {
-    padding: 10px;
-    margin: 0 5px;
+button {
+    background: linear-gradient(135deg, rgba(0,122,152,1) 0%, rgba(0,120,184,1) 17%, rgba(0,189,214,1) 48%, rgba(0,168,194,1) 60%, rgba(0,122,152,1) 82%, rgba(43,234,255,1) 99%);
+    border-radius: 20px 0px;
+    border: 2px solid #fff;
+    margin: 10px;
+    padding: 5px;
+    font-size: 130%;
+    font-weight: 900;
+    color: #000000;
     border: none;
-    border-radius: 4px;
-    background-color: #042a53;
-    color: #fff;
-    cursor: pointer;
+    font-family: 'LETRA1';
+    transition: color 0.2s, transform 0.4s;
 }
 
-.button-container button:disabled {
-    background-color: #6c757d;
-    cursor: not-allowed;
+button:hover {
+    transform: scale(1.05);
+    font-family: 'LETRA2';
 }
