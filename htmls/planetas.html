@@ -8,7 +8,14 @@
     <link rel="stylesheet" type="text/css" href="/Css/planetas.css" />  
 </head>
 <body>
-    <button id="showAllInfoButton">Show All Info</button>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="/Pictures//fondoplanetas.mp4" type="video/mp4">
+            
+        </video>
+    </div>
+    <div class="peticiones">
+    <button id="showAllInfoButton">Show All info</button>
     <button id="climateButton">Climate</button>
     <button id="gravityButton">Gravity</button>
     <button id="terrainButton">Terrain</button>
@@ -16,9 +23,21 @@
     <button id="rotationPeriodButton">Rotation Period</button>
     <button id="orbitalPeriodButton">Orbital Period</button>
     <button id="diameterButton">Diameter</button>
+    </div>
 
     <div id="planetContainer"></div>
 
-    <script src="/js/planetas.js"></script>
+    <footer class="mainmenu">
+        <div class="containerbuttom">
+            <a href="/htmls/index.html">
+                <button>
+                    Main Menu
+                </button>
+            </a>
+        </div>
+    </footer>
+
+   
 </body>
+<script src="/js/planetas.js"></script>
 </html>

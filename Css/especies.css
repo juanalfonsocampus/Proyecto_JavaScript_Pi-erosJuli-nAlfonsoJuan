@@ -12,6 +12,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -47,13 +48,16 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 20px;
-    height: 100vh;
+    padding-top: 120px; /* Espacio para evitar que las tarjetas cubran los botones */
+    width: 100%;
     align-content: center;
+    z-index: 1;
+    position: relative;
 }
 
 .info-card {
     background: rgba(0, 0, 0, 0.651);
+    border: 1px solid #fff;
     border-radius: 8px;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -61,6 +65,8 @@ body {
     padding: 20px;
     text-align: center;
     font-size: 150%;
+    position: relative;
+    z-index: 1;
 }
 strong{
     font-family:'LETRA2';
@@ -68,10 +74,11 @@ strong{
     letter-spacing: 4px;
 }
 
-.peticiones {
+.peticiones {   
     display: flex;
+    justify-content: space-evenly;
+    justify-content: row;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 button {
@@ -91,4 +98,19 @@ button {
 button:hover {
     transform: scale(1.05);
     font-family: 'LETRA2';
+}
+@media screen and (max-width: 768px) {
+    .peticiones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #species-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .info-card {
+        margin: 20px 0;
+    }
 }

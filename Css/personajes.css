@@ -42,26 +42,35 @@ body {
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: ce;
     flex-wrap: wrap;
     gap: 20px;
 }
 
 .character {
-    border: 1px solid #000000;
+    background: rgba(2, 32, 22, 0.438);
+    border-radius: 8px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
+    margin: 40px;
     padding: 10px;
-    border-radius: 4px;
-    background-color: #fff;
-    width: 200px;
-}
+    text-align: center;
+    font-size: 100%;}
 
 .character h2 {
     font-size: 1.2em;
     margin: 0 0 10px;
+    font-family: 'LETRA2';
+    letter-spacing: 2px;
 }
-
+strong{
+    color: #47CA85;
+    font-size: 20pxz;
+    font-weight: 900;
+}
 .character p {
     margin: 5px 0;
+    color: #fff;
 }
 .button-container{
     display: flex;
@@ -70,7 +79,8 @@ body {
     flex-wrap: wrap;
 }
 button {
-    background: linear-gradient(135deg, rgba(0,122,152,1) 0%, rgba(0,120,184,1) 17%, rgba(0,189,214,1) 48%, rgba(0,168,194,1) 60%, rgba(0,122,152,1) 82%, rgba(43,234,255,1) 99%);
+    background: linear-gradient(45deg,  rgb(235,233,249) 0%,rgb(206,199,236) 67%,rgb(193,191,234) 100%);
+    letter-spacing: 1.5px;
     border-radius: 20px 0px;
     border: 2px solid #fff;
     margin: 10px;
