@@ -12,7 +12,7 @@ body {
 }
 
 .character {
-    border: 1px solid #ddd;
+    border: 1px solid #000000;
     padding: 10px;
     border-radius: 4px;
     background-color: #fff;
@@ -37,7 +37,7 @@ body {
     margin: 0 5px;
     border: none;
     border-radius: 4px;
-    background-color: #007bff;
+    background-color: #042a53;
     color: #fff;
     cursor: pointer;
 }

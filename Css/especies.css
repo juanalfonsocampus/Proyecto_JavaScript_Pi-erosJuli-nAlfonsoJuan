@@ -16,7 +16,6 @@ body {
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
-    overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -54,12 +53,13 @@ body {
 }
 
 .info-card {
-    border: 1px solid #000000;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    display: inline-block;
-}
+    background: rgba(0, 0, 0, 0.651);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px;
+    padding: 20px;
+    text-align: center;}
 
 .peticiones {
     display: flex;
@@ -82,5 +82,6 @@ button {
 }
 
 button:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
+    font-family: 'LETRA2';
 }
