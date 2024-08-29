@@ -15,6 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    flex-direction: column;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -71,4 +72,21 @@ strong{
 }
 .card h2 {
     margin-top: 0;
+}
+.mainmenu{
+    margin: 5px;
+    padding: 3px;
+}
+button{
+    background: linear-gradient(135deg,  #f16f5c 14%,#f16f5c 34%,#f02f17 82%,#e73827 100%);
+    border-radius: 20px 0px;
+    font-size: 100%;
+    color: #fff;
+    border: none;
+    font-family: 'LETRA2';
+    transition: color 0.2s,transform 0.4s;
+}
+button:hover{
+    color:#aa0b0b;
+    transform: scale(1.2) ;
 }

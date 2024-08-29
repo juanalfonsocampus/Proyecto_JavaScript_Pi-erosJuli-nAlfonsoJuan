@@ -1,18 +1,86 @@
+@font-face {
+    font-family: LETRA1;
+    src: url(/Fuentes/Starjhol.ttf);
+}
+@font-face {
+    font-family: LETRA2;
+    src: url(/Fuentes//Starjedi.ttf);
+}
 body {
     font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-.info-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    display:inline-block;
+::-webkit-scrollbar {
+    display: none;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 #species-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
     height: 100vh;
+    align-content: center;
+}
+
+.info-card {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.peticiones {
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
+    justify-content: space-between;
+}
+
+button {
+    background: linear-gradient(135deg, rgba(0,122,152,1) 0%, rgba(0,120,184,1) 17%, rgba(0,189,214,1) 48%, rgba(0,168,194,1) 60%, rgba(0,122,152,1) 82%, rgba(43,234,255,1) 99%);
+    border-radius: 20px 0px;
+    border: 2px solid #fff;
+    margin: 10px;
+    padding: 5px;
+    font-size: 130%;
+    font-weight: 900;
+    color: #000000;
+    border: none;
+    font-family: 'LETRA1';
+    transition: color 0.2s, transform 0.4s;
+}
+
+button:hover {
+    transform: scale(1.02);
 }
