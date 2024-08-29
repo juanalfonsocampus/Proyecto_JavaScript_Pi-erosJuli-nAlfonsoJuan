@@ -16,6 +16,9 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+::-webkit-scrollbar {
+    display: none;
+}
 .video-background {
     position: fixed;
     top: 0;
