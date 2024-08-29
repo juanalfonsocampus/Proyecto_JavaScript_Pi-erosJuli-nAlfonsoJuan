@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const showAllInfoButton = document.getElementById('showAllInfoButton');
     const climateButton = document.getElementById('climateButton');
     const gravityButton = document.getElementById('gravityButton');
     const terrainButton = document.getElementById('terrainButton');
@@ -7,6 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const orbitalPeriodButton = document.getElementById('orbitalPeriodButton');
     const diameterButton = document.getElementById('diameterButton');
     const planetContainer = document.getElementById('planetContainer');
+
+    fetchAndDisplayPlanets('all');
+
+    showAllInfoButton.addEventListener('click', async () => {
+        await fetchAndDisplayPlanets('all');
+    });
 
     climateButton.addEventListener('click', async () => {
         await fetchAndDisplayPlanets('climate');
@@ -47,13 +54,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displayPlanets(planets, type) {
-        planetContainer.innerHTML = ''; // Clear previous content
+        planetContainer.innerHTML = '';
 
         planets.forEach(planet => {
             const planetCard = document.createElement('div');
             planetCard.className = 'planet-card';
             let info;
-            if (type === 'climate') {
+
+            if (type === 'all') {
+                info = `
+                    <strong>Planet:</strong> ${planet.name}<br>
+                    <strong>Climate:</strong> ${planet.climate}<br>
+                    <strong>Gravity:</strong> ${planet.gravity}<br>
+                    <strong>Terrain:</strong> ${planet.terrain}<br>
+                    <strong>Population:</strong> ${planet.population}<br>
+                    <strong>Rotation Period:</strong> ${planet.rotation_period}<br>
+                    <strong>Orbital Period:</strong> ${planet.orbital_period}<br>
+                    <strong>Diameter:</strong> ${planet.diameter}
+                `;
+            } else if (type === 'climate') {
                 info = `
                     <strong>Planet:</strong> ${planet.name}<br>
                     <strong>Climate:</strong> ${planet.climate}
@@ -89,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <strong>Diameter:</strong> ${planet.diameter}
                 `;
             }
+            
             planetCard.innerHTML = info;
             planetContainer.appendChild(planetCard);
         });
