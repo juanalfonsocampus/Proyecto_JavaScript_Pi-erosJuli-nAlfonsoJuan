@@ -9,14 +9,34 @@
 
 </head>
 <body>
-    <button id="show-all-info-btn">Show All Info</button>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="/Pictures/fondopeliculas.mp4" type="video/mp4">
+            
+        </video>
+    </div>
+
+    <div class="peticiones">
+    <button id="show-all-info-btn">Show All info</button>
     <button id="opening-crawl-btn">Show Synopses</button>
     <button id="director-btn">Show Directors</button>
     <button id="producer-btn">Show Producers </button>
+    </div>
 
 
     <div id="films-container"></div>
 
-    <script src="/js/peliculas.js"></script>
+    <footer class="mainmenu">
+        <div class="containerbuttom">
+            <a href="/htmls/index.html">
+                <button>
+                    Main Menu
+                </button>
+            </a>
+        </div>
+    </footer>
+
+   
 </body>
+<script src="/js/peliculas.js"></script>
 </html>

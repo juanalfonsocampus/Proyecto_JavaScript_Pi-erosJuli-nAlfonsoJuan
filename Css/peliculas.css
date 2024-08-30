@@ -1,18 +1,108 @@
+
+@font-face {
+    font-family: LETRA1;
+    src: url(/Fuentes/Starjhol.ttf);
+}
+@font-face {
+    font-family: LETRA2;
+    src: url(/Fuentes//Starjedi.ttf);
+}
 body {
     font-family: Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 .info-card {
-    border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
     display: inline-block;
-    width: 300px;
+
 }
-#films-container {
+
+#vehicles-container{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+    padding-top: 120px; /* Espacio para evitar que las tarjetas cubran los botones */
+    width: 100%;
     align-content: center;
-    height: 120vh;
+    z-index: 1;
+    position: relative;
+}
+
+.info-card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: rgba(92, 85, 85, 0.336);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px;
+    padding: 20px;
+    text-align: center;
+    font-size: 100%;
+    position: relative;
+    z-index: 1;
+}
+strong{
+    text-shadow: 2px 2px black;
+    font-family:'LETRA2';
+    color: #50a12b;
+    letter-spacing: 4px;
+}
+
+.peticiones {   
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: row;
+    flex-wrap: wrap;
+}
+button {
+    background: linear-gradient(45deg,  #ffa84c 0%,#d84141 53%,#ff7b0d 100%);
+    border-radius: 20px 0px;
+    margin: 10px;
+    padding: 5px;
+    font-size: 130%;
+    font-weight: 900;
+    color: #000000;
+    border: none;
+    font-family: 'LETRA1';
+    transition: color 0.2s, transform 0.4s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    font-family: 'LETRA2';
 }

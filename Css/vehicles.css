@@ -89,7 +89,6 @@ strong{
     justify-content: row;
     flex-wrap: wrap;
 }
-p{}
 button {
     background: linear-gradient(135deg,  rgba(250,198,149,1) 0%,rgba(245,171,102,1) 33%,rgba(239,141,49,1) 100%);
     border-radius: 20px 0px;
